@@ -21,3 +21,24 @@ const yearElement = document.getElementById('year');
 if (yearElement) {
   yearElement.textContent = new Date().getFullYear();
 }
+
+// Open the full-size portrait from the small profile image.
+const portraitTrigger = document.querySelector('.portrait-trigger');
+const portraitDialog = document.getElementById('portrait-dialog');
+const portraitDialogClose = document.querySelector('.portrait-dialog-close');
+
+if (portraitTrigger && portraitDialog && portraitDialogClose) {
+  portraitTrigger.addEventListener('click', () => {
+    portraitDialog.showModal();
+  });
+
+  portraitDialogClose.addEventListener('click', () => {
+    portraitDialog.close();
+  });
+
+  portraitDialog.addEventListener('click', (event) => {
+    if (event.target === portraitDialog) {
+      portraitDialog.close();
+    }
+  });
+}
