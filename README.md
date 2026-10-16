@@ -6,7 +6,7 @@ This is a small static portfolio website built with plain HTML, CSS and minimal 
 
 - `index.html` — all page content and section structure.
 - `styles.css` — all design rules, spacing, colours, layout and responsive styling.
-- `script.js` — tiny interactions for the mobile navigation and footer year.
+- `script.js` — mobile navigation, footer year and the accessible photo viewer.
 - `assets/` — local images and project visuals.
 
 ## Quick edit guide
@@ -36,5 +36,5 @@ The page is intentionally simple and readable. Most content is written directly 
 ## Notes
 
 - The design follows a minimal editorial style with a strong green, ivory and taupe palette.
-- Placeholder content is used where assets or verified metrics are not yet available.
+- Case-study metrics are shown with the account and timeframe visible in the supplied Instagram snapshots; a missing date range is noted.
 - The page works as a static website and can be opened directly in a browser.

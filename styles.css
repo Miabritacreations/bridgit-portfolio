@@ -275,7 +275,17 @@ p {
   color: var(--forest-green);
 }
 
-.portrait-dialog {
+.podcast-link {
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.podcast-link:hover,
+.podcast-link:focus-visible {
+  background: var(--charcoal);
+}
+
+.photo-dialog {
   position: fixed;
   max-width: min(90vw, 720px);
   max-height: 90vh;
@@ -285,11 +295,11 @@ p {
   box-shadow: var(--shadow);
 }
 
-.portrait-dialog::backdrop {
+.photo-dialog::backdrop {
   background: rgba(20, 24, 21, 0.8);
 }
 
-.portrait-dialog img {
+.photo-dialog img {
   display: block;
   max-width: 100%;
   max-height: calc(90vh - 4rem);
@@ -297,7 +307,7 @@ p {
   object-fit: contain;
 }
 
-.portrait-dialog-close {
+.photo-dialog-close {
   position: absolute;
   top: 0.6rem;
   right: 0.75rem;
@@ -307,6 +317,15 @@ p {
   background: var(--white);
   color: var(--forest-green);
   cursor: pointer;
+}
+
+.photo-enlarge-trigger {
+  cursor: zoom-in;
+}
+
+.photo-enlarge-trigger[role="button"]:focus-visible {
+  outline: 2px solid var(--forest-green);
+  outline-offset: 3px;
 }
 
 /* GENERAL SECTION STYLES */
@@ -579,6 +598,39 @@ p {
   font-size: 0.75rem;
 }
 
+.timeline-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.3rem;
+}
+
+.timeline-heading h3 {
+  margin: 0;
+}
+
+.timeline-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+.timeline-logo img {
+  display: block;
+  width: 48px;
+  height: auto;
+}
+
+.timeline-logo figcaption {
+  max-width: 72px;
+  color: rgba(37, 37, 37, 0.75);
+  font-size: 0.65rem;
+  line-height: 1.2;
+}
+
 /* SKILLS */
 .skills-layout {
   display: grid;
@@ -595,56 +647,6 @@ p {
 
 .skill-list li + li {
   margin-top: 0.5rem;
-}
-
-/* RESULTS */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.25rem;
-  margin-top: 2rem;
-}
-
-.stat-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  padding: 1.5rem 1.25rem;
-}
-
-.stat-label {
-  margin-bottom: 0.7rem;
-  color: var(--forest-green);
-  font-size: 0.8rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-.stats-evidence {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-  gap: 0.65rem;
-  margin-top: 1rem;
-}
-
-.stats-evidence figure {
-  min-width: 0;
-  margin: 0;
-}
-
-.stats-evidence img {
-  display: block;
-  width: 100%;
-  height: 190px;
-  object-fit: contain;
-  background: var(--charcoal);
-}
-
-.stats-evidence figcaption {
-  padding-top: 0.4rem;
-  color: rgba(37, 37, 37, 0.75);
-  font-size: 0.72rem;
-  line-height: 1.4;
 }
 
 /* CONTACT */
@@ -696,10 +698,6 @@ p {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .stats-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .sample-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -731,8 +729,7 @@ p {
   .two-column,
   .skills-layout,
   .project-grid,
-  .sample-grid,
-  .stats-grid {
+  .sample-grid {
     grid-template-columns: 1fr;
   }
 
