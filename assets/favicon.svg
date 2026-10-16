@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#25372d"/>
+  <rect x="4" y="4" width="56" height="56" rx="12" fill="none" stroke="#c7b8a3" stroke-width="1"/>
+  <text x="32" y="43" fill="#f4ebdd" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700" letter-spacing="-2" text-anchor="middle">BN</text>
+</svg>

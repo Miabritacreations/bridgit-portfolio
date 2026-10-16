@@ -8,6 +8,7 @@ This is a small static portfolio website built with plain HTML, CSS and minimal 
 - `styles.css` — all design rules, spacing, colours, layout and responsive styling.
 - `script.js` — mobile navigation, footer year and the accessible photo viewer.
 - `assets/` — local images and project visuals.
+- `assets/favicon.svg`, `assets/favicon.ico`, and PNG variants — site and touch icons.
 
 ## Quick edit guide
 
